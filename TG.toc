@@ -1,3 +1,5 @@
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {1}Name}{3}{section.1}%
-\contentsline {section}{\numberline {2}Метрические характеристики графов}{4}{section.2}%
+\contentsline {section}{\numberline {1}Определение простого графа}{3}{section.1}%
+\contentsline {section}{\numberline {2}Некоторые обобщения графов}{3}{section.2}%
+\contentsline {section}{\numberline {3}Name}{4}{section.3}%
+\contentsline {section}{\numberline {4}Метрические характеристики графов}{5}{section.4}%

@@ -9,10 +9,14 @@
 \newtheorem*{theorem*}{Теорема}
 \theoremstyle{definition}
 \newtheorem*{definition*}{Определение}
+\theoremstyle{definition}
+\newtheorem*{example*}{Пример}
 \renewcommand\qedsymbol{$\blacksquare$}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 \usetikzlibrary {graphs}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \renewcommand{\leq}{\leqslant}
 \renewcommand{\geq}{\geqslant}
@@ -25,6 +29,83 @@
   \newpage
   \tableofcontents
   \newpage
+  %\chapter{Основные понятия, связанные с термином "граф"}
+  \section{Определение простого графа}
+  Пусть $V\neq\varnothing$ - конечное множество и $V^{(2)}$ - множество
+  всех двухэлементных подмножеств $V$. $(V^{(2)}=\{U\subseteq V||U|=2\})$.
+  Упорядоченная пара $(V,E)$, где $E\subseteq V^{(2)}$ называется \textbf{простым графом}, вершинами которого являются элементы $V$, а рёбрами - элементы $E$.
+  \textbf{Пример:}
+
+    $V=\{1,2,3,4,5,6\}, E=\{\{1,5\},\{2,3\},\{1,4\},\{2,4\},\{4,5\},\{3,5\}\}$
+    
+    \begin{tikzpicture}[main/.style = {draw, circle, thin}]
+      \node[main](1){$1$};
+      \node[main](2)[below right of=1]{$2$};
+      \node[main](6)[below left of=1][anchor=east]{$6$};
+      \node[main](5)[below of=6]{$5$};
+      \node[main](4)[below right of=5]{$4$};
+      \node[main](3)[below right of=2]{$3$};
+      \draw[thick] (1) -- (5) -- (4) -- (3) -- (2) -- (4);
+      \draw[thick] (5) -- (3);
+    \end{tikzpicture}
+    
+    Число $|V|$ называют \textbf{порядком графа}, а число $|E|$ - \textbf{размером графа}.
+    $$G=(V,E), V=V(G), E=E(G)$$
+
+    Если порядок графа равен n, а размер равен m, то говорят, что это \textbf{(n,m)-граф}.
+
+    Две веришины $u$ и $v$ в графе \textbf{смежные}, если $\{u,v\}\in E(G)$. Два ребра $e_1,e_2$ \textbf{смежные}, если $e_1\cap e_2\neq\varnothing$
+
+    Вершина $v$ и ребро $e$ \textbf{инцедентны} если $v\in e$
+
+    \begin{tikzpicture}[main/.style = {draw, circle, thin}]
+      \node[main](u){u};
+      \node[main](v)[right =1]{v};
+      \draw (u) -- node[anchor=south]{e} (v);
+    \end{tikzpicture}
+    
+    Примечание: $\{u,v\}=uv$
+
+    \textbf{Окружением веришины} $u$ в графе $G$ называют множество: $N_G(u)=\{v\in V(G)|uv\in E(G)\}$
+
+    \begin{definition*}
+      Число $deg_Gv=|N_G(v)|$ - мощность окружения вершины $v$ - называют \textbf{степенью вершины} в $G$
+    \end{definition*}
+
+    Пусть $v\in V(G)$:
+    \begin{enumerate}
+      \item $deg_Gv=0\leftrightarrow v$ - \textbf{изолированная вершина}
+      \item $deg_Gv=|V(G)|-1\leftrightarrow v$ - \textbf{доминирующая вершина}
+      \item $deg_Gv=1\leftrightarrow v$ - \textbf{висячая вершина}
+    \end{enumerate}
+
+    \begin{definition*}
+      Граф $G$ называют \textbf{регулярным}, если он имеет одинаковые степени вершин.
+    \end{definition*}
+    \begin{definition*}
+      Граф $G$ называют \textbf{K-регулярным}, если $\forall v\in V(G),deg(v)=k$.
+    \end{definition*}
+    \begin{definition*}
+      $K_n$ - \textbf{полный граф}(граф со всеми возможными вершинами)
+    \end{definition*}
+  \section{Некоторые обобщения графов}
+  \begin{enumerate}
+    \item Мультиграф
+    
+    \begin{definition*}
+      \textbf{Мультиграфом} называют упорядоченную пару $(V,E)$, где E - конечное мультимножество на множестве $V^{(2)}$ ($V$ - конечное непустое множество)
+
+      \includegraphics{image.png}
+    \end{definition*}
+    \item Псевдограф
+    
+    \begin{definition*}
+      \textbf{Псевдографом} называют упорядоченную пару $(V,E)$, где $E$ - конечное мультимножество на $V^{(2)}\cup V$
+
+      \includegraphics{pseudo.png}
+    \end{definition*}
+    
+  \end{enumerate}
   \section{Name}
   \begin{theorem*}
     Пусть $G$ -- это $(n,m)$ граф, $k$ -- число компонент связности
@@ -197,11 +278,12 @@
     \end{enumerate}
   \end{proof}
   \begin{theorem*}
-  Для любого связного графа ж верно: $r(G)\leq diam(G)\leq 2r(G)$
+  Для любого связного графа ж верно: $r(G)\leq d(G)\leq 2r(G)$
   \end{theorem*}
   \begin{proof}
+    .
     \begin{enumerate}
-        \item $r(G)\leq diam(G)$ - очевидно
+        \item $r(G)\leq d(G)$ - очевидно
         \item $diam(G)\leq 2r(G)$. Берём две переферичиские$(u,v)$ и одну центральную$(w)$. Тогда данное равенство получается через равенство треугольника:
         
         \begin{tikzpicture}[graph/.style = {draw, circle}, dot/.style = {draw, circle}]
@@ -211,6 +293,8 @@
             \draw (u) -- (w) -- (v);
             \draw[dotted] (u) -- (v);
         \end{tikzpicture}
+
+        По свойству треугольников:$$d(u,v)\leq d(u,w)+d(w,v)\rightarrow d(G)\leq2r(G)$$
     \end{enumerate}
   \end{proof}
 \end{document}
