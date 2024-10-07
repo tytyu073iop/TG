@@ -1,75 +1,216 @@
-\documentclass{article}
+\documentclass[a4paper, 12pt]{article}
 \usepackage[english, russian]{babel}
 \usepackage{listings}
-\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm, bindingoffset=0pt]{geometry}
 \usepackage{hyperref}
-\usepackage{amsmath}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\newtheorem*{theorem*}{Теорема}
+\theoremstyle{definition}
+\newtheorem*{definition*}{Определение}
+\renewcommand\qedsymbol{$\blacksquare$}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary {graphs}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
 
 \title{Типы уравнений}
 \author{Бирюк Илья Александрович}
 
 \begin{document}
-\maketitle
-\newpage
-\tableofcontents
-\newpage
-\section{}
-Теорема: Пусть G-(n,m) граф, k - число компонент связности
+  \maketitle
+  \newpage
+  \tableofcontents
+  \newpage
+  \section{Name}
+  \begin{theorem*}
+    Пусть $G$ -- это $(n,m)$ граф, $k$ -- число компонент связности
+    Тогда
+    $$n-k\leq{m}\leq\frac{(n-k)(n-k+1)}{2},.$$
+  \end{theorem*}
+  
+  \begin{proof}
+    $m\leq{n-k}$ - Доказывается по мат индукции
+    
+    $m\leq\frac{(n-k)(n-k+1)}{2}$ - 
+    
+    Берём $k\geq{2}$
+    
+    \begin{enumerate}
+      \item рисуем $k$ полных графов
+      
+      \begin{tikzpicture}[main/.style = {draw, circle}]
+        \node[main](1){$G_1$};
+        \node[main](2)[right of=1]{$G_2$};
+        \node (dots) [right of=2] {$\cdots$};
+        \node[main](k)[right of=dots]{$G_k$};
+      \end{tikzpicture}
+      \item Вынимаем из $G_{k-1}$ точку и перемещаем её в $G_k$ (сохраняя полноту). Возьмём, что $\forall n\le k, V(G_k)\geq V(G_n)$. Тогда количество рёбер изменится на $V(G_k)-(V(G_n)-1) > 0$.
+      \item Повторяем так, пока все кроме последнего подграфа не будут тривиальными (то есть пока они не будут иметь одну вершину).
+      \item Самый экстремальный случай, изолированные вершины и $K_{n-k+1}$, тогда число рёбер $$C^2_{n-k+1}=\frac{(n-k)(n-k+1)}{2}.$$ 
+    \end{enumerate}
+  \end{proof}
+  
+  \begin{theorem*}
+    Пусть $G$ связный граф и $e\in E(G)$.
+    
+    \begin{enumerate}
+      \item Если $е$ принадлежит некоторому циклу, то граф $G - e$ связен
+      \item Если $е$ не принадлежит никакому циклу, то граф $G - e$ содержит ровно $2$ компоненты связности
+    \end{enumerate}
+  \end{theorem*}
+  \begin{proof}
+    Возьмём $e=uv,e\in E(G)$
+    
+    \begin{enumerate}
+      \item Если $е$ принадлежит некоторому циклу, то граф $G - e$ связен
+      
+      \begin{enumerate}
+        \item Нарисуем цикл
+        
+        \begin{tikzpicture}[graph/.style = {draw, circle}, dot/.style = {draw, circle}]
+          \node[dot](1){};
+          \node[dot](-1)[below right of=1]{};
+          \node[dot](2)[above right of=1]{};
+          \node (dots) [right of=2] {$\cdots$};
+          \node[dot](u)[right of=dots]{$u$};
+          \node (dotsb) [right of=-1] {$\cdots$};
+          \node[dot] (v) [right of=dotsb] {$v$};
+          \draw (1) -- (2);
+          \draw (1) -- (-1);
+          \draw (-1) -- (dotsb);
+          \draw (dotsb) -- (v);
+          \draw (2) -- (dots);
+          \draw (dots) -- (u);
+          \draw (u) -- node[anchor=west]{$e$} (v) ;
+        \end{tikzpicture}
+        \item Удалим $e$
+        
+        \begin{tikzpicture}[graph/.style = {draw, circle}, dot/.style = {draw, circle}]
+          \node[dot](1){};
+          \node[dot](-1)[below right of=1]{};
+          \node[dot](2)[above right of=1]{};
+          \node (dots) [right of=2] {$\cdots$};
+          \node[dot](u)[right of=dots]{$u$};
+          \node (dotsb) [right of=-1] {$\cdots$};
+          \node[dot] (v) [right of=dotsb] {$v$};
+          \draw (1) -- (2);
+          \draw (1) -- (-1);
+          \draw (-1) -- (dotsb);
+          \draw (dotsb) -- (v);
+          \draw (2) -- (dots);
+          \draw (dots) -- (u);
+        \end{tikzpicture}
+        
+        Как можно заметить, не появилось ни одной компоненты связности.
+      \end{enumerate}
+      \item Если $е$ не принадлежит никакому циклу, то граф $G - e$ содержит ровно 2 компоненты связности
+      \begin{enumerate}
+        \item Учитывая условия выше, мы можем разделить граф на 2 части, имеющие маршрут к $u$ без $v$ и наоборот
+        
+        \begin{tikzpicture}[graph/.style = {draw, circle}, dot/.style = {draw, circle}]
+            \node[graph](1){$G_u$};
+            \node[dot](u)[right of=1]{$u$};
+            \draw (1) -- (u);
+            \node[dot](v)[right =0.5cm of u]{$v$};
+            \draw (u) -- node[anchor=south]{$e$} (v);
+            \node[graph](2)[right of=v]{$G_v$};
+            \draw (v) -- (2);
+        \end{tikzpicture}
+        \item Удаляем ребро $e$, и видим, что появилось 2 компоненты связности
+        
+        \begin{tikzpicture}[graph/.style = {draw, circle}, dot/.style = {draw, circle}]
+            \node[graph](1){$G_u$};
+            \node[dot](u)[right of=1]{$u$};
+            \draw (1) -- (u);
+            \node[dot](v)[right =0.5cm of u]{$v$};
+            \node[graph](2)[right of=v]{$G_v$};
+            \draw (v) -- (2);
+        \end{tikzpicture}
+      \end{enumerate}
+    \end{enumerate}
+  \end{proof}
+  
+  \section{Метрические характеристики графов}
+  Для параграфа: G - связен
 
-Тогда: $n-k\leq{m}\leq\frac{(n-k)(n-k+1)}{2}$
+  \textbf{Определение.} Расстояние $d(u,v)$ между вершинами $u\neq v$ графа G --  \textit{длинна кратчайшей простой цепи}, если $u=v$, то $d(u,v)=0$
+  
+  \textbf{Свойства:}
+  \begin{enumerate}
+    \item \textbf{Свойство неотрицательности.}
+    $$d(u,v)\geq 0\ \text{и}\ d(u,v) = 0 \Leftrightarrow u=v,\ \forall u,v\in V(G).$$
+    \item \textbf{Свойство симметрии.} 
+    $$d(u,v)=d(v,u),\ \forall u,v\in V(G).$$ 
+    \item \textbf{Свойство треугольников.}
+    $$d(u,v)\leq d(u,w)+d(w,u),\ \forall u,v\in V(G).$$
+  \end{enumerate}
+  
+  \textbf{Определение.} \textit{Эксцентриситетом вершины} называется величина $$e(v)=\max d(v,u),v\in V(G),$$ то есть максимальное расстояние от вершины до другой какой-либо вершины графа).
+  
+  \textbf{Определение.} \textit{Радиусом графа} называется величина $$r(G)=\min e(v),\ v\in V(G).$$
+  
+  \textbf{Определение.} \textit{Диаметром графа} называется величина $$d(G)=\max e(v),\ v\in V(G).$$
+  
+  \textbf{Определение.} \textit{Вершина в графа $G$ называется \textit{центральной}, если $e(v)=r(G)$ и \textbf{периферической}, если $e(v)=d(G)$.}
+  
+  \textbf{Определение.} Центр графа, множество всех его центральных вершин, перефирия, перефирийных.
+  
+  Пример, в круге Эксцентриситет вершины:
 
-Доказательство:
+  \begin{tikzpicture}[graph/.style = {draw, circle}, dot/.style = {draw, circle}]
+    \node[dot](1){4};
+    \node[dot](2)[above right of=1]{3};
+    \node[dot](3)[right of=2]{2};
+    \node[dot](4)[right of=3]{3};
+    \node[dot](5)[below right of=4]{4};
+    \draw (1) -- (2) -- (3) -- (4) -- (5);
+  \end{tikzpicture}
+  $r(P_5)=2, d(P_5)=4$
+  
+  \begin{theorem*}
+    Для любого графа $H$ существует граф $G$, центр которого порождает $H$.
+  \end{theorem*}
+  \begin{proof}
+    \begin{enumerate}
+        \item Возьмём граф $H$
+        
+        \begin{tikzpicture}[graph/.style = {draw, circle}, dot/.style = {draw, circle}]
+            \node[graph](H){$H$};
+        \end{tikzpicture}
+        \item Добавим к нему вершины $x,y,z,t$, $x$ и $y$ Соедениены со всеми вершинами $H$
+        
+        \begin{tikzpicture}[graph/.style = {draw, circle}, dot/.style = {draw, circle}]
+            \node[graph](H){$H$};
+            \node[dot](x)[left =0.5cm of H]{$x$};
+            \node[dot](y)[right =0.5cm of H]{$y$};
+            \node[dot](z)[below of=x]{$z$};
+            \node[dot](t)[below of=y]{$t$};
+            \draw (z) -- (x) (y) -- (t);
+            \draw[double] (x) -- (H) -- (y);
+        \end{tikzpicture}
 
-$m\leq{n-k}$ - Доказывается по мат индукции
-
-$m\leq\frac{(n-k)(n-k+1)}{2}$ - 
-
-Нарисовать 1
-
-Берём $k\geq{2}$
-
-
-
-Самый экстримальный случай, изолированные вершины и $K_{n-k+1}$, тогда число рёбер $C^2_{n-k+1}=\frac{(n-k)(n-k+1)}{2}$ 
-
-Теорема: Пусть G связный граф и $e\in E(G)$
-
-\begin{enumerate}
-    \item Если е принадлежит некоторому циклу, то G - e связен
-    \item Если е не, то G-e содержит ровно 2 компоненты связности
-\end{enumerate}
-Доказательство:
-\begin{enumerate}
-    \item $e=uv\in E(G)$
-    \item Разорвём связь, тогда наш граф разделим на две части $u\in G_u$ и $v\in G_v$$x\in V(G)$
-\end{enumerate}
-\section{Метрические характеристики графов}
-Для параграфа: G - связен
-
-Определение: Расстояние $d(u,v)$ между вершинами $u\neq v$ графа G - длинна кратчайшей простой цепи, если $u=v$, то $d(u,v)=0$
-
-Свойства:
-\begin{enumerate}
-    \item $d(u,v)\geq 0$ и $d(u,v) = 0 \leftrightarrow u=v, \forall u,v\in V(G)$ - Свойство неотррицательности
-    \item $d(u,v)=d(v,u), \forall u,v\in V(G)$ Свойство симметрии
-    \item $d(u,v)\leq d(u,w)+d(w,u), \forall u,v\in V(G)$ - свойство треугольников
-\end{enumerate}
-
-Определение: Экстриситент вершины - $e(v)=max d(v,u),v\in V(G)$ (максимальное расстояние от вершины до другой какой-либо вершины графа)
-
-Определение: радиус графа - $r(G)=\min e(v),v\in V(G)$
-
-Определение: диаметр графа - $d(G)=\max e(v),v\in V(G)$
-
-Определение: Вершина в графа ж называется центральной, если $e(v)=r(G)$ и перефирической, если $e(v)=d(G)$
-Определение: Центр графа, множество всех его центральных вершин, перефирия, перефирийных.
-
-Пример 2
-
-Теорема: Для любого графа н существует граф ж, центр которого порождает н.
-Доказательство: 3
-Теорема: Для любого связного графа ж верно: $r(G)\leq diam(G)\leq 2r(G)$
-Доказательство: $r(G)\leq diam(G)$ - очевидно
-$diam(G)\leq 2r(G)$
-4
+        Как видно $\forall v \in V(H), e(v)=r(G)=2$
+    \end{enumerate}
+  \end{proof}
+  \begin{theorem*}
+  Для любого связного графа ж верно: $r(G)\leq diam(G)\leq 2r(G)$
+  \end{theorem*}
+  \begin{proof}
+    \begin{enumerate}
+        \item $r(G)\leq diam(G)$ - очевидно
+        \item $diam(G)\leq 2r(G)$. Берём две переферичиские$(u,v)$ и одну центральную$(w)$. Тогда данное равенство получается через равенство треугольника:
+        
+        \begin{tikzpicture}[graph/.style = {draw, circle}, dot/.style = {draw, circle}]
+            \node[dot](w){$w$};
+            \node[dot](u)[below left of=w]{$u$};
+            \node[dot](v)[below right of=w]{$v$};
+            \draw (u) -- (w) -- (v);
+            \draw[dotted] (u) -- (v);
+        \end{tikzpicture}
+    \end{enumerate}
+  \end{proof}
 \end{document}
