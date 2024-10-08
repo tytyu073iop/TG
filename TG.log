@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.1)  8 OCT 2024 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.1)  8 OCT 2024 15:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -910,23 +910,39 @@ File: ./images/graphics.png Graphic file (type png)
 Package pdftex.def Info: ./images/graphics.png  used on input line 173.
 (pdftex.def)             Requested size: 246.92188pt x 46.67424pt.
  [6 <./images/example_iso.png> <./images/ex_ni.png> <./images/graphics.png>]
+<./images/gw.png, id=113, 441.14813pt x 128.73094pt>
+File: ./images/gw.png Graphic file (type png)
+<use ./images/gw.png>
+Package pdftex.def Info: ./images/gw.png  used on input line 183.
+(pdftex.def)             Requested size: 441.14705pt x 128.7306pt.
+<./images/gpp1.png, id=114, 401.24907pt x 107.65219pt>
+File: ./images/gpp1.png Graphic file (type png)
+<use ./images/gpp1.png>
+Package pdftex.def Info: ./images/gpp1.png  used on input line 187.
+(pdftex.def)             Requested size: 401.24808pt x 107.65192pt.
+<./images/gpp2.png, id=115, 436.63126pt x 254.45062pt>
+File: ./images/gpp2.png Graphic file (type png)
+<use ./images/gpp2.png>
+Package pdftex.def Info: ./images/gpp2.png  used on input line 198.
+(pdftex.def)             Requested size: 436.63019pt x 254.45pt.
+ [7 <./images/gw.png> <./images/gpp1.png> <./images/gpp2.png>]
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 216.
+LaTeX Warning: Command \cyre invalid in math mode on input line 243.
 
 Missing character: There is no å in font cmr12!
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 217.
+LaTeX Warning: Command \cyre invalid in math mode on input line 244.
 
 Missing character: There is no å in font cmr12!
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 224.
+LaTeX Warning: Command \cyre invalid in math mode on input line 251.
 
 Missing character: There is no å in font cmr12!
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 265.
+LaTeX Warning: Command \cyre invalid in math mode on input line 292.
 
 Missing character: There is no å in font cmr12!
-[7] [8] [9] (TG.aux)
+[8] [9] [10] (TG.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -935,17 +951,17 @@ Package rerunfilecheck Info: File `TG.out' has not changed.
 (rerunfilecheck)             Checksum: 47215FE3B822A38E50F9E44F75F7FE87;1648.
  ) 
 Here is how much of TeX's memory you used:
- 25771 strings out of 474486
- 473419 string characters out of 5744227
- 1942542 words of memory out of 5000000
- 47594 multiletter control sequences out of 15000+600000
+ 25800 strings out of 474486
+ 474000 string characters out of 5744227
+ 1941542 words of memory out of 5000000
+ 47621 multiletter control sequences out of 15000+600000
  576105 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,8n,107p,561b,804s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labi1200.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1200.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1728.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm2074.pk><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TG.pdf (9 pages, 1347810 bytes).
+Output written on TG.pdf (10 pages, 1960124 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 541 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
