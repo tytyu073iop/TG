@@ -104,8 +104,82 @@
 
       \includegraphics{pseudo.png}
     \end{definition*}
+    \item Орграф(Ориентированный граф)
     
+    \begin{definition*}
+      $E\subseteq V\times V=\{\{u,v\}|u\in V, v\in V\}$ - \textbf{Орграф}
+
+      $uv$ называется \textit{дугой} (вместо ребра)
+
+      \includegraphics{Org.png}
+    \end{definition*}
+    \item Гиперграф
+    
+    \begin{definition*}
+      \textbf{Гиперграфом} называют граф, где $E\subseteq2^V,2^V=\{U|U\subseteq V\}$
+
+      \includegraphics{Hyper.png}
+    \end{definition*}
   \end{enumerate}
+  \section{Помеченные графы. Изоморфизм графов}
+  \begin{definition*}
+    Граф назовут \textbf{помеченным}, если его вершинам принадлежат некоторые попарно различные метки.
+
+    \includegraphics{metka.png}
+  \end{definition*}
+
+  Пусть $G_1, G_2$ - помеченные графы порядка n. Графы $G_1, G_2$ \textbf{равны}, если 
+  $V(G_1)=V(G_2)\land E(G_1)=E(G_2)$
+
+  \includegraphics{eq.png}
+
+  \begin{theorem*}
+    Число всех помеченных графов порядка $n\geq1$ обозначается $l_n$ и равно $2^{C^2_n}=2^{\frac{n(n-1)}{2}}$
+  \end{theorem*}
+  \begin{proof}
+    Пусть у графа n вершин и m рёбер. $0\leq m\leq C^2_n$. Количество подмножеств множества всех возможных рёбер графа порядка n
+    $$C^0_{C^2_n}+C^1_{C^2_n}+C^2_{C^2_n}+\dots+C^{C^2_n}_{C^2_n}$$
+  \end{proof}
+  \begin{proof}
+    ($n=5$ в качестве примера)
+
+    \includegraphics{proof.png}
+  \end{proof}
+  \subsection*{Изоморфизм графов}
+  Пусть G и H - графы и $\phi:V(G)\rightarrow V(H)$  - биекция. Тогда $\phi$ - \textbf{изоморфизм} графа G на H, а G и H \textbf{изоморфны}. $G\cong H$
+
+  \includegraphics{example_iso.png}
+
+  $g_n$ - число всех попарно неизоморфных графов порядка n.
+
+  \includegraphics{ex_ni.png}
+
+  \begin{theorem*}
+    \textbf{(Лойа)}
+    $$g_n\geq[\frac{2^{C^2_n}}{n!}] \text{или}g_n\sim_{n\rightarrow\infty}\frac{2^{C^2_n}}{n!}$$
+  \end{theorem*}
+
+  \textbf{Свойства} изоморфизма:
+  \begin{enumerate}
+    \item $G\cong G$ для конечных графов
+    \item $\forall G,H:G\cong H\leftrightarrow H\cong G$
+    \item $\forall G,H,F: G\cong H\cap H\cong F\rightarrow G\cong F$
+  \end{enumerate}
+  \section{Графические последовательности. Критерий графичности}
+  \begin{definition*}
+    Последовательность $d_1,d_2,\dots,d_n$, где $d_i\in Z\geq0$, где $n\geq1$
+    и $d_1\geq d_2\geq\dots\geq d_n$, называется \textbf{графической}, если $\exists G$ порядка n, степени вершин которого равны $d_1,d_2,\dots,d_n$
+
+    \includegraphics{graphics.png}
+  \end{definition*}
+  \begin{definition*}
+    Граф, который соответствует последовательности называют \textbf{реализацией} этой графической последовательности.
+  \end{definition*}
+  \begin{theorem*}
+    \textbf{(Гавела-Хакими), критерий графичности}
+
+    Последовательность $(D=d_1,d_2,\dots,d_n)$, где $n\geq2$ и $d_1\geq d_2\geq\dots\geq d_n$, является графической \textit{тогда и только тогда, когда} последовательность $(D'=d_2-1,d_3-1,\dots,d_{d_1+1},d_{d_1+2},\dots,d_n)$ является графической.
+  \end{theorem*}
   \section{Name}
   \begin{theorem*}
     Пусть $G$ -- это $(n,m)$ граф, $k$ -- число компонент связности
