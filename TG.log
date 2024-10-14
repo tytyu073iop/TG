@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.1)  8 OCT 2024 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.1)  14 OCT 2024 09:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -856,71 +856,71 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `TG.toc'.
 
  [2]
-<./images/image.png, id=51, 187.70125pt x 89.33376pt>
+<./images/image.png, id=61, 187.70125pt x 89.33376pt>
 File: ./images/image.png Graphic file (type png)
 <use ./images/image.png>
 Package pdftex.def Info: ./images/image.png  used on input line 98.
 (pdftex.def)             Requested size: 187.70079pt x 89.33353pt.
  [3]
-<./images/pseudo.png, id=67, 242.9075pt x 103.38625pt>
+<./images/pseudo.png, id=77, 242.9075pt x 103.38625pt>
 File: ./images/pseudo.png Graphic file (type png)
 <use ./images/pseudo.png>
 Package pdftex.def Info: ./images/pseudo.png  used on input line 105.
 (pdftex.def)             Requested size: 242.90689pt x 103.38599pt.
-<./images/Org.png, id=68, 128.73094pt x 74.52844pt>
+<./images/Org.png, id=78, 128.73094pt x 74.52844pt>
 File: ./images/Org.png Graphic file (type png)
 <use ./images/Org.png>
 Package pdftex.def Info: ./images/Org.png  used on input line 114.
 (pdftex.def)             Requested size: 128.7306pt x 74.52824pt.
-<./images/Hyper.png, id=69, 193.47281pt x 86.57344pt>
+<./images/Hyper.png, id=79, 193.47281pt x 86.57344pt>
 File: ./images/Hyper.png Graphic file (type png)
 <use ./images/Hyper.png>
 Package pdftex.def Info: ./images/Hyper.png  used on input line 121.
 (pdftex.def)             Requested size: 193.47234pt x 86.57321pt.
-<./images/metka.png, id=70, 73.02281pt x 53.44969pt>
+<./images/metka.png, id=80, 73.02281pt x 53.44969pt>
 File: ./images/metka.png Graphic file (type png)
 <use ./images/metka.png>
 Package pdftex.def Info: ./images/metka.png  used on input line 128.
 (pdftex.def)             Requested size: 73.02261pt x 53.44954pt.
-<./images/eq.png, id=71, 437.38406pt x 152.82094pt>
+<./images/eq.png, id=81, 437.38406pt x 152.82094pt>
 File: ./images/eq.png Graphic file (type png)
 <use ./images/eq.png>
 Package pdftex.def Info: ./images/eq.png  used on input line 134.
 (pdftex.def)             Requested size: 437.38298pt x 152.82054pt.
  [4 <./images/image.png> <./images/pseudo.png> <./images/Org.png> <./images/Hyper.png> <./images/metka.png>]
-<./images/proof.png, id=85, 443.40656pt x 289.83281pt>
+<./images/proof.png, id=95, 443.40656pt x 289.83281pt>
 File: ./images/proof.png Graphic file (type png)
 <use ./images/proof.png>
 Package pdftex.def Info: ./images/proof.png  used on input line 146.
 (pdftex.def)             Requested size: 443.40547pt x 289.83209pt.
-<./images/example_iso.png, id=86, 327.47343pt x 206.27063pt>
+<./images/example_iso.png, id=96, 327.47343pt x 206.27063pt>
 File: ./images/example_iso.png Graphic file (type png)
 <use ./images/example_iso.png>
 Package pdftex.def Info: ./images/example_iso.png  used on input line 151.
 (pdftex.def)             Requested size: 327.47264pt x 206.27011pt.
  [5 <./images/eq.png> <./images/proof.png>]
-<./images/ex_ni.png, id=99, 380.17032pt x 161.85469pt>
+<./images/ex_ni.png, id=109, 380.17032pt x 161.85469pt>
 File: ./images/ex_ni.png Graphic file (type png)
 <use ./images/ex_ni.png>
 Package pdftex.def Info: ./images/ex_ni.png  used on input line 155.
 (pdftex.def)             Requested size: 380.16939pt x 161.85428pt.
-<./images/graphics.png, id=100, 246.9225pt x 46.67438pt>
+<./images/graphics.png, id=110, 246.9225pt x 46.67438pt>
 File: ./images/graphics.png Graphic file (type png)
 <use ./images/graphics.png>
 Package pdftex.def Info: ./images/graphics.png  used on input line 173.
 (pdftex.def)             Requested size: 246.92188pt x 46.67424pt.
  [6 <./images/example_iso.png> <./images/ex_ni.png> <./images/graphics.png>]
-<./images/gw.png, id=113, 441.14813pt x 128.73094pt>
+<./images/gw.png, id=123, 441.14813pt x 128.73094pt>
 File: ./images/gw.png Graphic file (type png)
 <use ./images/gw.png>
 Package pdftex.def Info: ./images/gw.png  used on input line 183.
 (pdftex.def)             Requested size: 441.14705pt x 128.7306pt.
-<./images/gpp1.png, id=114, 401.24907pt x 107.65219pt>
+<./images/gpp1.png, id=124, 401.24907pt x 107.65219pt>
 File: ./images/gpp1.png Graphic file (type png)
 <use ./images/gpp1.png>
 Package pdftex.def Info: ./images/gpp1.png  used on input line 187.
 (pdftex.def)             Requested size: 401.24808pt x 107.65192pt.
-<./images/gpp2.png, id=115, 436.63126pt x 254.45062pt>
+<./images/gpp2.png, id=125, 436.63126pt x 254.45062pt>
 File: ./images/gpp2.png Graphic file (type png)
 <use ./images/gpp2.png>
 Package pdftex.def Info: ./images/gpp2.png  used on input line 198.
@@ -942,26 +942,37 @@ Missing character: There is no å in font cmr12!
 LaTeX Warning: Command \cyre invalid in math mode on input line 292.
 
 Missing character: There is no å in font cmr12!
-[8] [9] [10] (TG.aux)
+[8] [9] [10]
+<./images/212.png, id=168, 194.22563pt x 212.29312pt>
+File: ./images/212.png Graphic file (type png)
+<use ./images/212.png>
+Package pdftex.def Info: ./images/212.png  used on input line 424.
+(pdftex.def)             Requested size: 194.22514pt x 212.2926pt.
+<./images/241.png, id=169, 379.4175pt x 467.49657pt>
+File: ./images/241.png Graphic file (type png)
+<use ./images/241.png>
+Package pdftex.def Info: ./images/241.png  used on input line 453.
+(pdftex.def)             Requested size: 379.41656pt x 467.49542pt.
+ [11 <./images/212.png>] [12 <./images/241.png>] [13] (TG.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `TG.out' has not changed.
-(rerunfilecheck)             Checksum: 47215FE3B822A38E50F9E44F75F7FE87;1648.
+(rerunfilecheck)             Checksum: BD6DBFEBD5C14557723361C12CC5B7B3;2352.
  ) 
 Here is how much of TeX's memory you used:
- 25800 strings out of 474486
- 474000 string characters out of 5744227
+ 25839 strings out of 474486
+ 474531 string characters out of 5744227
  1941542 words of memory out of 5000000
- 47621 multiletter control sequences out of 15000+600000
+ 47641 multiletter control sequences out of 15000+600000
  576105 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,8n,107p,561b,804s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labi1200.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1200.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1728.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\Ilya\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm2074.pk><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ilya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TG.pdf (10 pages, 1960124 bytes).
+Output written on TG.pdf (13 pages, 2568103 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 152 words of extra memory for PDF output out of 10000 (max. 10000000)
 

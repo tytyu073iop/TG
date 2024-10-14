@@ -5,3 +5,5 @@
 \contentsline {section}{\numberline {4}Графические последовательности. Критерий графичности}{6}{section.4}%
 \contentsline {section}{\numberline {5}Name}{8}{section.5}%
 \contentsline {section}{\numberline {6}Метрические характеристики графов}{9}{section.6}%
+\contentsline {section}{\numberline {7}Двудольные графы. Теорема Кёнига}{10}{section.7}%
+\contentsline {section}{\numberline {8}Определение дерева. Основные свойства деревьев}{12}{section.8}%
